@@ -2,7 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBookOpen,
+  faCircleArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Detailsurat = (props) => {
   const [data, setData] = useState({});
@@ -35,6 +38,15 @@ const Detailsurat = (props) => {
     <div className="scroll overflow-auto">
       <div className=" mb-3">
         <div className="container">
+          <div
+            className="btn btn-dark mb-2"
+            onClick={() => {
+              props.history.push("/quran");
+            }}
+          >
+            <FontAwesomeIcon icon={faCircleArrowLeft} /> {"  "}
+            Back
+          </div>
           <div className="row">
             <div className="col-md-12">
               <div className="card shadow">

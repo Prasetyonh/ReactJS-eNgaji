@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBookOpen,
+  faCircleArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Tafsir = (props) => {
   const [data, setData] = useState([]);
@@ -28,6 +31,15 @@ const Tafsir = (props) => {
     <div className="scroll overflow-auto">
       <div className="detail-surat mb-3">
         <div className="container">
+          <div
+            className="btn btn-dark mb-2"
+            onClick={() => {
+              props.history.goBack();
+            }}
+          >
+            <FontAwesomeIcon icon={faCircleArrowLeft} /> {"  "}
+            Back
+          </div>
           <div className="row">
             <div className="col-md-12">
               <div className="card shadow">

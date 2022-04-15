@@ -8,6 +8,7 @@ import DaftarKota from "../Components/DaftarKota";
 
 const JadwalSholat = (props) => {
   const [kotas, setKotas] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios
@@ -35,6 +36,7 @@ const JadwalSholat = (props) => {
           placeholder="Cari Kota"
           className="me-2"
           aria-label="Search"
+          onChange={(e) => setSearch(e.target.value)}
         />
         <Button variant="outline-success">
           <FontAwesomeIcon icon={faSearch} />
@@ -42,11 +44,22 @@ const JadwalSholat = (props) => {
       </Form>
       <div className="daftarSurat overflow-auto pb-3">
         {kotas.length > 0 ? (
-          kotas.map((kota) => {
-            return (
-              <DaftarKota key={kota.id} kota={kota} detailKota={detailKota} />
-            );
-          })
+          kotas
+            // eslint-disable-next-line array-callback-return
+            .filter((value) => {
+              if (search === "") {
+                return value;
+              } else if (
+                value.lokasi.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return value;
+              }
+            })
+            .map((kota) => {
+              return (
+                <DaftarKota key={kota.id} kota={kota} detailKota={detailKota} />
+              );
+            })
         ) : (
           <div className="d-flex align-items-center">
             <h1>Loading</h1>

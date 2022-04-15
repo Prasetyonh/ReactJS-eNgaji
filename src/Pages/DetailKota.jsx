@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt, faClock } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faCalendarAlt,
+  faCircleArrowLeft,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const DetailKota = (props) => {
   const [data, setData] = useState([]);
@@ -54,6 +60,15 @@ const DetailKota = (props) => {
     <div className="detail-kota overflow-auto">
       <div className=" mb-5">
         <div className="container">
+          <div
+            className="btn btn-dark mb-2"
+            onClick={() => {
+              props.history.push("/jadwal-sholat");
+            }}
+          >
+            <FontAwesomeIcon icon={faCircleArrowLeft} /> {"  "}
+            Back
+          </div>
           <div className="row">
             <div className="col-md-12">
               <div className="card shadow">
