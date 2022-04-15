@@ -14,12 +14,13 @@ const AlQuran = (props) => {
       .get("https://equran.id/api/surat")
       .then((res) => {
         const surats = res.data;
+        console.log(surats);
         setSurats(surats);
       })
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
   const detailSurat = (id) => {
     props.history.push(`/quran/surat/${id}`);
   };

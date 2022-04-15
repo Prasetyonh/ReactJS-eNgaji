@@ -53,6 +53,9 @@ footer {
   .scroll {
     height: 800px;
   }
+  .detail-kota {
+    height: 850px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -78,6 +81,10 @@ footer {
     max-height: 650px;
   }
 
+  .detail-ayat {
+    height: 600px;
+  }
+
   .audio-player {
     width: 100%;
   }
@@ -87,6 +94,10 @@ footer {
   }
   .icon-btn {
     height: 120px;
+  }
+
+  .detail-kota {
+    height: 800px;
   }
   footer {
     position: absolute;

@@ -9,6 +9,7 @@ import AlQuran from "./Pages/AlQuran";
 import DetailSurat from "./Pages/DetailSurat.jsx";
 import Tafsir from "./Pages/Tafsir";
 import JadwalSholat from "./Pages/JadwalSholat";
+import DetailKota from "./Pages/DetailKota";
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
               <Route path="/quran/surat/:id" component={DetailSurat} exact />
               <Route path="/quran/tafsir/:id" component={Tafsir} exact />
               <Route path="/jadwal-sholat" component={JadwalSholat} exact />
+              <Route
+                path="/jadwal-sholat/detail/:id"
+                component={DetailKota}
+                exact
+              />
             </Switch>
           </main>
         </Container>

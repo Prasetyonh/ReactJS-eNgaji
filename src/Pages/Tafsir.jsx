@@ -88,7 +88,7 @@ const Tafsir = (props) => {
             ) : (
               <div className="d-flex align-items-center">
                 <h1>Loading</h1>
-                <div className=" justify-content-center text-center">
+                <div className=" justify-content-center text-center me-auto">
                   <div class="spinner-grow text-primary" role="status">
                     <span class="visually-hidden">Loading...</span>
                   </div>
@@ -105,9 +105,6 @@ const Tafsir = (props) => {
                     <span class="visually-hidden">Loading...</span>
                   </div>
                   <div class="spinner-grow text-info" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                  </div>
-                  <div class="spinner-grow text-light" role="status">
                     <span class="visually-hidden">Loading...</span>
                   </div>
                   <div class="spinner-grow text-dark" role="status">
