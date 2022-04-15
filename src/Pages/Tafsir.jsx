@@ -25,7 +25,7 @@ const Tafsir = (props) => {
       });
   }, [id]);
   return (
-    <div>
+    <div className="scroll overflow-auto">
       <div className="detail-surat mb-3">
         <div className="container">
           <div className="row">

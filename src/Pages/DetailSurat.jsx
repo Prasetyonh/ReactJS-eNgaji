@@ -32,8 +32,8 @@ const Detailsurat = (props) => {
   }, [id]);
 
   return (
-    <div>
-      <div className="detail-surat mb-3">
+    <div className="scroll overflow-auto">
+      <div className=" mb-3">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -66,7 +66,7 @@ const Detailsurat = (props) => {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container detail-ayat">
         <div className="row">
           <div className="col-md-12">
             {ayat.length > 0 ? (
