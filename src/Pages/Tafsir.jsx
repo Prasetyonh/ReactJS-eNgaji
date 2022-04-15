@@ -47,7 +47,7 @@ const Tafsir = (props) => {
                   <div
                     className="btn btn-success rounded-pill float-end  mt-3"
                     onClick={() => {
-                      props.history.push(`/surat/${id}`);
+                      props.history.push(`/quran/surat/${id}`);
                     }}
                   >
                     <FontAwesomeIcon icon={faBookOpen} /> Baca Surat
@@ -86,7 +86,35 @@ const Tafsir = (props) => {
                 );
               })
             ) : (
-              <h1>Loading...</h1>
+              <div className="d-flex align-items-center">
+                <h1>Loading</h1>
+                <div className=" justify-content-center text-center">
+                  <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-secondary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-light" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <div class="spinner-grow text-dark" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
             )}
           </div>
         </div>
