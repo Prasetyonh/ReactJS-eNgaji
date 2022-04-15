@@ -8,6 +8,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const AlQuran = (props) => {
   const [surats, setSurats] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios
@@ -34,6 +35,7 @@ const AlQuran = (props) => {
           placeholder="Cari Surat"
           className="me-2"
           aria-label="Search"
+          onChange={(e) => setSearch(e.target.value)}
         />
         <Button variant="outline-success">
           <FontAwesomeIcon icon={faSearch} />
@@ -41,9 +43,20 @@ const AlQuran = (props) => {
       </Form>
       <div className="daftarSurat overflow-auto pb-3">
         {surats &&
-          surats.map((surat, idx) => (
-            <DaftarSurat key={idx} surat={surat} goDetail={detailSurat} />
-          ))}
+          surats
+            // eslint-disable-next-line array-callback-return
+            .filter((value) => {
+              if (search === "") {
+                return value;
+              } else if (
+                value.nama_latin.toLowerCase().includes(search.toLowerCase())
+              ) {
+                return value;
+              }
+            })
+            .map((surat, idx) => (
+              <DaftarSurat key={idx} surat={surat} goDetail={detailSurat} />
+            ))}
       </div>
     </div>
   );
