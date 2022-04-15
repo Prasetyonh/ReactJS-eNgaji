@@ -41,10 +41,22 @@ const JadwalSholat = (props) => {
         </Button>
       </Form>
       <div className="daftarSurat overflow-auto pb-3">
-        {kotas &&
-          kotas.map((kota, idx) => (
-            <DaftarKota key={idx} kota={kota} detailKota={detailKota} />
-          ))}
+        {kotas.length > 0 ? (
+          kotas.map((kota) => {
+            return (
+              <DaftarKota key={kota.id} kota={kota} detailKota={detailKota} />
+            );
+          })
+        ) : (
+          <div className="d-flex align-items-center">
+            <h1>Loading</h1>
+            <div className="ms-3 justify-content-center">
+              <div class="spinner-border text-dark" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
