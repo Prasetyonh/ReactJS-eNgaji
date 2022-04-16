@@ -100,6 +100,7 @@ footer {
   width: 100%;
   height: 0;
 }
+
 @media only screen and (min-width: 900px) {
   .daftarSurat {
     max-height: 800px;
@@ -108,6 +109,10 @@ footer {
     height: 800px;
   }
   .detail-kota {
+    height: 850px;
+  }
+
+  #about {
     height: 850px;
   }
 }
@@ -125,7 +130,7 @@ footer {
 }
 @media only screen and (max-width: 768px) {
   .menu {
-    height: 490px;
+    height: 470px;
   }
   .imgCarousel {
     height: 230px;

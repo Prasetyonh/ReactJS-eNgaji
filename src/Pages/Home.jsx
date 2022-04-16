@@ -14,15 +14,14 @@ const Home = (props) => {
             </h1>
             <div className="d-flex justify-content-center ">
               <div className="me-3">
-                <img
-                  className="icon-btn mb-3 shadow"
-                  src="https://i.pinimg.com/564x/6e/8d/b7/6e8db74284d3f1f3d5e64fa5b3afd60e.jpg"
-                  alt=""
-                  height="200"
-                  onClick={() => {
-                    props.history.push("/quran");
-                  }}
-                />
+                <Link to={"/quran"}>
+                  <img
+                    className="icon-btn mb-3 shadow"
+                    src="https://i.pinimg.com/564x/6e/8d/b7/6e8db74284d3f1f3d5e64fa5b3afd60e.jpg"
+                    alt=""
+                    height="200"
+                  />{" "}
+                </Link>
                 <h5>
                   <strong> Al-Qur'an</strong>
                 </h5>{" "}
