@@ -42,7 +42,7 @@ const Tafsir = (props) => {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="card shadow">
+              <div className="card card-surat shadow">
                 <div className="card-body">
                   <h3 className="card-title">
                     {data.nama_latin} - ({data.nama})
