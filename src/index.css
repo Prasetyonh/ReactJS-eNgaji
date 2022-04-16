@@ -56,6 +56,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+ul.contact {
+  list-style: none;
+  margin-left: -20px;
+}
 
 .navbar {
   background-color: #f5ebbc;

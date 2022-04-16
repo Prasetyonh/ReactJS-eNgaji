@@ -5,12 +5,12 @@ import {
   faMailBulk,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useRef } from "react";
+import Swal from "sweetalert2";
 
 const ContactUs = () => {
   const formRef = useRef(null);
   const scriptUrl =
     "https://script.google.com/macros/s/AKfycbwH7yhBJc8u6pwjK4qqgZRBEs_nhZWWyZLxzGc9n64dNaVNcAwblHhYd7RZxalQeGEc/exec";
-  const myAlert = document.querySelector(".alert");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
@@ -21,10 +21,25 @@ const ContactUs = () => {
       method: "POST",
       body: new FormData(formRef.current),
     })
-      .then((res) => {
+      .then(() => {
         console.log("SUCCESSFULLY SUBMITTED");
         setLoading(false);
-        myAlert.classList.toggle("d-none");
+        Swal.fire({
+          title: "Terima kasih",
+          text: "Pesan anda telah kami terima",
+          icon: "success",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#0d6efd",
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+          allowEnterKey: false,
+          showConfirmButton: true,
+          showCancelButton: false,
+          showCloseButton: false,
+          timer: 5000,
+          timerProgressBar: true,
+        });
+
         formRef.current.reset();
       })
       .catch((err) => console.log(err));
@@ -35,7 +50,7 @@ const ContactUs = () => {
       <div className="row justify-content-center">
         <div className="col-md-6">
           <h2 className="mb-2">Contact Us</h2>
-          <ul>
+          <ul className="contact">
             {" "}
             <p>
               <li>
@@ -56,27 +71,17 @@ const ContactUs = () => {
           </ul>
         </div>
 
-        <div className="col-md-6" style={{ padding: 30 }}>
+        <div className="col-md-6">
+          <h2>Send Us a Message</h2>
           <form
             method="post"
             onSubmit={handleSubmit}
             ref={formRef}
             name="Contact-Form"
+            id="Contact-Form"
+            className="px-3 mb-5"
           >
             <div className="form-group mb-3">
-              <div
-                class="alert alert-success alert-dismissible fade show d-none "
-                role="alert"
-              >
-                <strong class="fw-bold">Terima kasih!</strong> Pesan Anda sudah
-                kami terima.
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="alert"
-                  aria-label="close"
-                ></button>
-              </div>
               <input
                 type="text"
                 className="form-control"
@@ -108,10 +113,23 @@ const ContactUs = () => {
             </div>
 
             <input
+              id="submit"
               className="btn btn-primary btn-block mt-2"
               type="submit"
               value={loading ? "Loading..." : "SEND MESSAGE"}
             />
+            <button
+              class="btn btn-danger btn-loading d-none"
+              type="button"
+              disabled
+            >
+              <span
+                class="spinner-border spinner-border-sm"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              Loading...
+            </button>
           </form>
         </div>
       </div>
