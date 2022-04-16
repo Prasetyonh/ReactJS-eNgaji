@@ -2,12 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowLeft,
   faCalendarAlt,
   faCircleArrowLeft,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 
 const DetailKota = (props) => {
   const [data, setData] = useState([]);
@@ -71,7 +69,7 @@ const DetailKota = (props) => {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="card shadow">
+              <div className="card card-detail-kota shadow">
                 <div className="card-body">
                   <div className="row">
                     <div className="col-md-6">
@@ -99,7 +97,7 @@ const DetailKota = (props) => {
 
         <div className=" mt-5 mb-2">
           <div className="container">
-            <div className="card shadow">
+            <div className="card card-waktu-sholat shadow">
               <div className="card-body">
                 <h5 className="card-title">
                   <div className="row">
@@ -122,7 +120,7 @@ const DetailKota = (props) => {
 
         <div className=" mb-2">
           <div className="container">
-            <div className="card shadow">
+            <div className="card card-waktu-sholat shadow">
               <div className="card-body">
                 <h5 className="card-title">
                   <div className="row">
@@ -144,7 +142,7 @@ const DetailKota = (props) => {
         </div>
         <div className=" mb-2">
           <div className="container">
-            <div className="card shadow">
+            <div className="card card-waktu-sholat shadow">
               <div className="card-body">
                 <h5 className="card-title">
                   <div className="row">
@@ -167,7 +165,7 @@ const DetailKota = (props) => {
 
         <div className=" mb-2">
           <div className="container">
-            <div className="card shadow">
+            <div className="card card-waktu-sholat shadow">
               <div className="card-body">
                 <h5 className="card-title">
                   <div className="row">
@@ -189,7 +187,7 @@ const DetailKota = (props) => {
         </div>
         <div className=" mb-2">
           <div className="container">
-            <div className="card shadow">
+            <div className="card card-waktu-sholat shadow">
               <div className="card-body">
                 <h5 className="card-title">
                   <div className="row">
@@ -211,7 +209,7 @@ const DetailKota = (props) => {
         </div>
         <div className=" mb-2">
           <div className="container">
-            <div className="card shadow">
+            <div className="card card-waktu-sholat shadow">
               <div className="card-body">
                 <h5 className="card-title">
                   <div className="row">

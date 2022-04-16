@@ -10,10 +10,8 @@ const DaftarSurat = ({ surat, goDetail }) => {
           onClick={() => goDetail(surat.nomor)}
         >
           <Card.Body>
-            <div className="float-end">
-              <strong className="badge rounded-pill bg-dark text-light">
-                {surat.nomor}
-              </strong>
+            <div className="badge-nomor-surat float-end">
+              <strong className="badge rounded-pill ">{surat.nomor}</strong>
             </div>
             <Card.Title>
               {surat.nama_latin} <strong>({surat.nama}</strong> ){" "}

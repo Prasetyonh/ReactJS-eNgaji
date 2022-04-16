@@ -49,7 +49,7 @@ const Detailsurat = (props) => {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <div className="card shadow">
+              <div className=" card card-detail-surat shadow">
                 <div className="card-body">
                   <h3 className="card-title">
                     {namaLatin} - ({nama})

@@ -6,14 +6,59 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+body.light-mode .badge-nomor-surat {
+  background-color: #212529;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #dfdfdf;
+}
+
+body.dark-mode .dark-mode-toggle > button {
+  color: #999;
+}
+body.dark-mode .badge-nomor-surat {
+  background-color: #dfdfdf;
+}
+body.dark-mode .badge {
+  color: #212529;
+}
+body.dark-mode .card-detail-surat {
+  background-color: #212529;
+  color: #dfdfdf;
+}
+body.dark-mode .card-surat {
+  background-color: #212529;
+  color: #dfdfdf;
+}
+body.dark-mode .card-ayat {
+  background-color: #212529;
+  color: #dfdfdf;
+}
+
+body.dark-mode .card-waktu-sholat {
+  background-color: #212529;
+  color: #dfdfdf;
+}
+body.dark-mode .card-detail-kota {
+  background-color: #212529;
+  color: #dfdfdf;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .navbar {
-  background-color: #fff;
-  border-bottom: 1px solid #dee2e6;
+  background-color: #f5ebbc;
   z-index: 9999;
 }
 
@@ -28,8 +73,13 @@ code {
 .arab {
   text-align: end;
 }
+
 .card-surat {
   cursor: pointer;
+}
+
+.badge-nomor-surat {
+  border-radius: 8px;
 }
 
 .card-ayat {
@@ -40,6 +90,10 @@ code {
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
+}
+
+.footer {
+  background-color: #f5ebbc;
 }
 footer {
   position: absolute;
