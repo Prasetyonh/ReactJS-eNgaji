@@ -33,14 +33,14 @@ function Hero() {
         <div className="carousel-inner">
           <div className="carousel-item">
             <img
-              src="../Assets/Images/Hero3.jpg"
+              src="../Assets/Images/Hero1.webp"
               className="imgCarousel d-block w-100 "
               alt="..."
             />
           </div>
           <div className="carousel-item active">
             <img
-              src="../Assets/Images/Hero1.jpg"
+              src="../Assets/Images/Hero2.webp"
               className="imgCarousel d-block w-100 "
               alt="..."
             />
@@ -56,7 +56,7 @@ function Hero() {
           </div>
           <div className="carousel-item">
             <img
-              src="../Assets/Images/Hero2.jpg"
+              src="../Assets/Images/Hero3.webp"
               className="imgCarousel d-block w-100 "
               alt="..."
             />
