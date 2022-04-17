@@ -5,12 +5,13 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Components/NavbarComponent";
 import Footer from "./Components/FooterComponent";
 import Home from "./Pages/Home";
-import AlQuran from "./Pages/AlQuran";
-import DetailSurat from "./Pages/DetailSurat.jsx";
-import Tafsir from "./Pages/Tafsir";
-import JadwalSholat from "./Pages/JadwalSholat";
-import DetailKota from "./Pages/DetailKota";
+import AlQuran from "./Pages/Quran/AlQuran";
+import DetailSurat from "./Pages/Quran/DetailSurat.jsx";
+import Tafsir from "./Pages/Quran/Tafsir";
+import JadwalSholat from "./Pages/Sholat/JadwalSholat";
+import DetailKota from "./Pages/Sholat/DetailKota";
 import About from "./Pages/About";
+import Doa from "./Pages/Doa/KumpulanDoa";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                 component={DetailKota}
                 exact
               />
+              <Route exact path="/doa" component={Doa} />
             </Switch>
           </main>
         </Container>

@@ -119,12 +119,12 @@ const ContactUs = () => {
               value={loading ? "Loading..." : "SEND MESSAGE"}
             />
             <button
-              class="btn btn-danger btn-loading d-none"
+              className="btn btn-danger btn-loading d-none"
               type="button"
               disabled
             >
               <span
-                class="spinner-border spinner-border-sm"
+                className="spinner-border spinner-border-sm"
                 role="status"
                 aria-hidden="true"
               ></span>

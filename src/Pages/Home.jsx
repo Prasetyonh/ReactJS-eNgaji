@@ -12,12 +12,12 @@ const Home = (props) => {
             <h1 className="mb-3">
               <strong>Menu</strong>
             </h1>
-            <div className="d-flex justify-content-center ">
-              <div className="me-3">
+            <div className="row justify-content-center">
+              <div className="col-6 col-md-3 mb-3">
                 <Link to={"/quran"}>
                   <img
                     className="icon-btn mb-3 shadow"
-                    src="https://i.pinimg.com/564x/6e/8d/b7/6e8db74284d3f1f3d5e64fa5b3afd60e.jpg"
+                    src="../Assets/Images/Quran.jpg"
                     alt=""
                     height="200"
                   />{" "}
@@ -26,11 +26,11 @@ const Home = (props) => {
                   <strong> Al-Qur'an</strong>
                 </h5>{" "}
               </div>
-              <div className="ms-3">
+              <div className="col-6 col-md-3 mb-3">
                 <Link to="/jadwal-sholat">
                   <img
                     className="icon-btn mb-3 shadow"
-                    src="https://i.pinimg.com/564x/b4/21/94/b42194c07f90266f1bd4695b60368210.jpg"
+                    src="../Assets/Images/Sholat.jpg"
                     alt=""
                     height="200"
                   />
@@ -39,6 +39,20 @@ const Home = (props) => {
                   <strong>Jadwal Sholat</strong>
                 </h5>
               </div>
+              <div className="col-6 col-md-3 mb-3">
+                <Link to="/doa">
+                  <img
+                    className="icon-btn mb-3 shadow"
+                    src="../Assets/Images/Doa.jpg"
+                    alt=""
+                    height="200"
+                  />
+                </Link>
+                <h5>
+                  <strong>Kumpulan Doa</strong>
+                </h5>
+              </div>
+              <div className="col-6 col-md-3 d-md-none"></div>
             </div>
           </div>
         </div>

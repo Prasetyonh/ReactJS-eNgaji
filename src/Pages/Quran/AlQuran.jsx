@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DaftarSurat from "../Components/DaftarSurat";
+import DaftarSurat from "../../Components/DaftarSurat";
 
 import axios from "axios";
 import { Button, Form, FormControl } from "react-bootstrap";

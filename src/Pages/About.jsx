@@ -10,8 +10,8 @@ const about = () => {
         <p>
           e-Ngaji dibangun pada tahun 2022. Website ini bertujuan untuk
           memberikan kemudahan bagi siapa saja untuk membaca, mempelajari, dan
-          mendengarkan Al Quran. Website ini juga tersedia fitur jadwal sholat
-          untuk setiap kota di Indonesia{" "}
+          mendengarkan Al Quran. Website ini juga tersedia fitur kumpulan doa
+          sehari-hari, dan jadwal sholat untuk setiap kota di Indonesia{" "}
         </p>
       </section>
       <section id="kredit">

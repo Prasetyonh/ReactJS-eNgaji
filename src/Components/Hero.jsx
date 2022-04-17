@@ -31,9 +31,16 @@ function Hero() {
           ></button>
         </div>
         <div className="carousel-inner">
+          <div className="carousel-item">
+            <img
+              src="../Assets/Images/Hero3.jpg"
+              className="imgCarousel d-block w-100 "
+              alt="..."
+            />
+          </div>
           <div className="carousel-item active">
             <img
-              src="https://images.unsplash.com/photo-1596193433486-02333accdc13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              src="../Assets/Images/Hero1.jpg"
               className="imgCarousel d-block w-100 "
               alt="..."
             />
@@ -49,29 +56,10 @@ function Hero() {
           </div>
           <div className="carousel-item">
             <img
-              src="https://img.freepik.com/free-photo/islamic-new-year-decoration-with-traditional-food-quran_23-2148950292.jpg?t=st=1649855672~exp=1649856272~hmac=0911920d4b66065de45c4e53a84d5793d819e4d7681b696ffaf6e2657a559ac2&w=1380"
+              src="../Assets/Images/Hero2.jpg"
               className="imgCarousel d-block w-100 "
               alt="..."
             />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://img.freepik.com/free-photo/islamic-new-year-decoration-with-traditional-pastries-praying-beads_23-2148950291.jpg?t=st=1649856295~exp=1649856895~hmac=597029b01c2813ae6f551a6ec4cd928cb886f8649cf414054c341687aa9c4b5c&w=1380"
-              className="imgCarousel d-block w-100 "
-              alt="..."
-            />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
           </div>
         </div>
         <button
