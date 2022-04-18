@@ -18,7 +18,7 @@ const about = () => {
         <h2>Credits</h2>
         <p>
           Project ini tidak akan mungkin terjadi tanpa banyak open source
-          libraries, public API, dan project yang telah kami gunakan :{" "}
+          libraries dan public API yang telah kami gunakan :{" "}
         </p>
         <ul>
           <li>
