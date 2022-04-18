@@ -10,7 +10,7 @@ const Home = (props) => {
         <div>
           <div className="menu text-center">
             <h1 className="mb-3">
-              <strong>Menu</strong>
+              <strong>Home</strong>
             </h1>
             <div className="row justify-content-center">
               <div className="col-6 col-md-3 mb-3">
