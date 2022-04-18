@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Contact from "../Components/ContactUs";
 
 const about = () => {
@@ -22,22 +21,22 @@ const about = () => {
         </p>
         <ul>
           <li>
-            <Link href="https://equran.id/apidev">equran.id</Link> : Sebuah
-            public API yang menyediakan data Al Quran.
+            <a href="https://equran.id/apidev">equran.id</a> : Sebuah public API
+            yang menyediakan data Al Quran.
           </li>
           <li>
-            <Link href="https://api.myquran.com/">api.myquran.com</Link> :
-            Sebuah public API yang menyediakan data Al Quran, dan juga jadwal
-            sholat di setiap kota di Indonesia.
+            <a href="https://api.myquran.com/">api.myquran.com</a> : Sebuah
+            public API yang menyediakan data Al Quran, dan juga jadwal sholat di
+            setiap kota di Indonesia.
           </li>
           <li>
-            <Link href="https://github.com/axios/axios">Axios</Link> : Merupakan
-            klien HTTP berbasis promise sederhana untuk browser dan node.js.
-            Axios menyediakan library yang mudah digunakan dalam paket kecil
-            dengan antarmuka yang sangat dapat diperluas.
+            <a href="https://github.com/axios/axios">Axios</a> : Merupakan klien
+            HTTP berbasis promise sederhana untuk browser dan node.js. Axios
+            menyediakan library yang mudah digunakan dalam paket kecil dengan
+            antarmuka yang sangat dapat diperluas.
           </li>
           <li>
-            <Link href="https://vercel.com">Vercel</Link> : Merupakan salah satu
+            <a href="https://vercel.com">Vercel</a> : Merupakan salah satu
             penyedia layanan hosting gratis
           </li>
         </ul>
