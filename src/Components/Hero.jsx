@@ -33,7 +33,7 @@ function Hero() {
         <div className="carousel-inner ">
           <div className="carousel-item active">
             <img
-              src="../Assets/Images/hero.webp"
+              src="../Assets/Images/Hero.webp"
               className="imgCarousel d-block w-100 "
               alt="..."
             />
