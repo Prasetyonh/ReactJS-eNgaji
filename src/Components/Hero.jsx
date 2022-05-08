@@ -30,15 +30,15 @@ function Hero() {
             aria-label="Slide 3"
           ></button>
         </div>
-        <div className="carousel-inner">
-          <div className="carousel-item">
+        <div className="carousel-inner ">
+          <div className="carousel-item active">
             <img
-              src="../Assets/Images/Hero1.webp"
+              src="../Assets/Images/Hero.webp"
               className="imgCarousel d-block w-100 "
               alt="..."
             />
           </div>
-          <div className="carousel-item active">
+          <div className="carousel-item">
             <img
               src="../Assets/Images/Hero2.webp"
               className="imgCarousel d-block w-100 "

@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import useDarkMode from "use-dark-mode";
 import Toggle from "./Toggle";
+import { Link } from "react-router-dom";
 
 const Navbarcomponent = (props) => {
   const darkMode = useDarkMode(false);
@@ -27,12 +28,16 @@ const Navbarcomponent = (props) => {
               className="ms-auto my-2 my-lg-0"
               style={{ maxHeight: "300px" }}
             >
-              <Nav.Link href="/">
-                <FontAwesomeIcon icon={faHome} /> Home
+              <Nav.Link>
+                <Link style={{ color: "#6f6a55" }} to={"/"}>
+                  <FontAwesomeIcon icon={faHome} /> Home
+                </Link>
               </Nav.Link>
               <Nav.Link className="d-none d-md-block">|| {"  "}</Nav.Link>
-              <Nav.Link href="/about">
-                <FontAwesomeIcon icon={faInfoCircle} /> About
+              <Nav.Link>
+                <Link style={{ color: "#6f6a55" }} to={"/about"}>
+                  <FontAwesomeIcon icon={faInfoCircle} /> About
+                </Link>
               </Nav.Link>
               <Nav.Link className="d-none d-md-block">|| {"  "}</Nav.Link>
               <Nav.Link href="https://saweria.co/prasetyonh" target="_blank">
