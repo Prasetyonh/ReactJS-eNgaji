@@ -14,8 +14,8 @@ const KumpulanDoa = (props) => {
     axios
       .get("https://625c6621c9e78a8cb9b779da.mockapi.io/prasetyonh/kumpulandoa")
       .then((res) => {
-        const doa = res.data;
-
+        const doa = res.data[0].data;
+        console.log(res.data[0].data);
         setDoa(doa);
       })
       .catch((err) => {
