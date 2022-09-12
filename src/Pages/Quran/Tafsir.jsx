@@ -100,26 +100,8 @@ const Tafsir = (props) => {
             ) : (
               <div className="d-flex align-items-center">
                 <h1>Loading</h1>
-                <div className=" justify-content-center text-center me-auto">
-                  <div className="spinner-grow text-primary" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
-                  <div className="spinner-grow text-secondary" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
-                  <div className="spinner-grow text-success" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
-                  <div className="spinner-grow text-danger" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
-                  <div className="spinner-grow text-warning" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
-                  <div className="spinner-grow text-info" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                  </div>
-                  <div className="spinner-grow text-dark" role="status">
+                <div className="ms-3 justify-content-center">
+                  <div className="spinner-border text-dark" role="status">
                     <span className="visually-hidden">Loading...</span>
                   </div>
                 </div>

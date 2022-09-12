@@ -42,7 +42,7 @@ const AlQuran = (props) => {
         </Button>
       </Form>
       <div className="daftarSurat overflow-auto pb-3">
-        {surats &&
+        {surats.length > 0 ? (
           surats
             // eslint-disable-next-line array-callback-return
             .filter((value) => {
@@ -56,7 +56,17 @@ const AlQuran = (props) => {
             })
             .map((surat, idx) => (
               <DaftarSurat key={idx} surat={surat} goDetail={detailSurat} />
-            ))}
+            ))
+        ) : (
+          <div className="d-flex align-items-center">
+            <h1>Loading</h1>
+            <div className="ms-3 justify-content-center">
+              <div className="spinner-border text-dark" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
