@@ -51,6 +51,7 @@ const KumpulanDoa = (props) => {
                 return value;
               }
             })
+
             .map((doa) => {
               return <DaftarDoa key={doa.title} doa={doa} />;
             })
