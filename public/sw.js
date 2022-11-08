@@ -10,7 +10,6 @@ this.addEventListener("install", (event) => {
         "/bootstrap.min.css",
         "/index.html",
         "/",
-        "/users",
       ]);
     })
   );
