@@ -7,7 +7,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Tafsir = (props) => {
-  const [data, setData] = useState([]);
+  const [nama, setNama] = useState("");
+  const [arti, setArti] = useState("");
+  const [namaLatin, setNamaLatin] = useState("");
+  const [jumlahAyat, setJumlahAyat] = useState("");
   const [tafsir, setTafsir] = useState([]);
   const [suratKe, setSuratKe] = useState([]);
   const [tempatTurun, setTempatTurun] = useState([]);
@@ -15,13 +18,17 @@ const Tafsir = (props) => {
   const id = props.match.params.id;
   useEffect(() => {
     axios
-      .get(`https://equran.id/api/tafsir/${id}/`)
+      .get(`https://equran.id/api/v2/tafsir/${id}`)
       .then((res) => {
-        console.log(res.data);
-        setData(res.data);
-        setSuratKe(res.data.nomor);
-        setTafsir(res.data.tafsir);
-        setTempatTurun(res.data.tempat_turun);
+        const data = res.data.data;
+        console.log(data);
+        setNamaLatin(data.namaLatin);
+        setJumlahAyat(data.jumlahAyat);
+        setNama(data.nama);
+        setArti(data.arti);
+        setSuratKe(data.nomor);
+        setTafsir(data.tafsir);
+        setTempatTurun(data.tempatTurun);
       })
       .catch((err) => {
         console.log(err);
@@ -45,12 +52,12 @@ const Tafsir = (props) => {
               <div className="card card-surat shadow">
                 <div className="card-body">
                   <h3 className="card-title">
-                    {data.nama_latin} - ({data.nama})
+                    {namaLatin} - ({nama})
                   </h3>
-                  <span className="card-text">Arti : {data.arti}</span> <br />
+                  <span className="card-text">Arti : {arti}</span> <br />
                   <span>Surat ke : {suratKe}</span> <br />
                   <span className="card-text">
-                    Jumlah Ayat : {data.jumlah_ayat}
+                    Jumlah Ayat : {jumlahAyat}
                   </span>{" "}
                   <br />
                   <span className="text-capitalize">
@@ -89,7 +96,7 @@ const Tafsir = (props) => {
                               </strong>
                             </h3>
                             <strong>Ayat {param.ayat}</strong>
-                            <p className="card-text">{param.tafsir}</p>
+                            <p className="card-text">{param.teks}</p>
                           </div>
                         </div>
                       </div>

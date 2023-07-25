@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import {
   faBookQuran,
-  faDonate,
+  faMoon,
+  faSun,
   faHome,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
@@ -40,15 +41,27 @@ const Navbarcomponent = (props) => {
                 </Link>
               </Nav.Link>
               <Nav.Link className="d-none d-md-block">|| {"  "}</Nav.Link>
-              <Nav.Link href="https://saweria.co/prasetyonh" target="_blank">
-                <FontAwesomeIcon icon={faDonate} /> Support
-              </Nav.Link>
-              <Nav.Link className="d-none d-md-block">|| {"  "}</Nav.Link>
-              <Toggle
-                className="toggle"
-                checked={darkMode.value}
-                onChange={darkMode.toggle}
-              ></Toggle>
+
+              <div className="toggle mt-2" style={{ cursor: "pointer" }}>
+                {darkMode.value ? (
+                  <div onClick={darkMode.toggle}>
+                    <FontAwesomeIcon style={{ color: "orange" }} icon={faSun} />
+                    <span style={{ color: "#6f6a55" }} className="ms-1">
+                      Light
+                    </span>
+                  </div>
+                ) : (
+                  <div onClick={darkMode.toggle}>
+                    <FontAwesomeIcon
+                      style={{ color: "#6f6a55" }}
+                      icon={faMoon}
+                    />
+                    <span style={{ color: "#6f6a55" }} className="ms-1">
+                      Dark
+                    </span>
+                  </div>
+                )}
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,31 +8,55 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Detailsurat = (props) => {
-  const [data, setData] = useState({});
   const [nama, setNama] = useState("");
   const [arti, setArti] = useState("");
   const [ayat, setAyat] = useState("");
   const [namaLatin, setNamaLatin] = useState("");
   const [jumlahAyat, setJumlahAyat] = useState("");
+  const [audioFull, setAudioFull] = useState("");
 
   const id = props.match.params.id;
 
   useEffect(() => {
     axios
-      .get(`https://equran.id/api/surat/${id}/`)
+      .get(`https://equran.id/api/v2/surat/${id}`)
       .then((res) => {
-        console.log(res.data);
-        setData(res.data);
-        setNamaLatin(res.data.nama_latin);
-        setJumlahAyat(res.data.jumlah_ayat);
-        setNama(res.data.nama);
-        setAyat(res.data.ayat);
-        setArti(res.data.arti);
+        const data = res.data.data;
+        console.log(data);
+        setNamaLatin(data.namaLatin);
+        setJumlahAyat(data.jumlahAyat);
+        setNama(data.nama);
+        setAyat(data.ayat);
+        setArti(data.arti);
+        setAudioFull(data.audioFull["05"]);
       })
       .catch((err) => {
         console.log(err);
       });
   }, [id]);
+
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handleAudioPlay = (audioUrl) => {
+    const audio = audioRef.current;
+
+    if (audio && audio.src === audioUrl) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    } else {
+      if (audio) {
+        audio.pause();
+      }
+      audioRef.current = new Audio(audioUrl);
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
 
   return (
     <div className="scroll overflow-auto">
@@ -68,7 +92,7 @@ const Detailsurat = (props) => {
                     <audio
                       className="audio-player float-end"
                       controls
-                      src={data.audio}
+                      src={audioFull}
                     ></audio>{" "}
                   </span>
                 </div>
@@ -92,11 +116,19 @@ const Detailsurat = (props) => {
                             <h3 className="card-title">
                               {" "}
                               <strong className="badge rounded-pill bg-dark text-light">
-                                {param.nomor}
+                                {param.nomorAyat}
                               </strong>
                             </h3>
-                            <h4 className="text-end">{param.ar}</h4>
-                            <p className="card-text">{param.idn}</p>
+
+                            <h4
+                              className="text-end"
+                              onClick={() => handleAudioPlay(param.audio["05"])}
+                              style={{ cursor: "pointer" }}
+                            >
+                              {param.teksArab}
+                            </h4>
+                            <p className="text-end">{param.teksLatin}</p>
+                            <p className="card-text">{param.teksIndonesia}</p>
                           </div>
                         </div>
                       </div>

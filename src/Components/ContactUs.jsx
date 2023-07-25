@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useRef } from "react";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 const ContactUs = () => {
   const formRef = useRef(null);
@@ -65,7 +66,9 @@ const ContactUs = () => {
             </p>
             <p>
               <li>
-                <FontAwesomeIcon icon={faGlobeAsia} /> yotech.my.id
+                <a href="https://prasetyonh.my.id" style={{ color: "#333333" }}>
+                  <FontAwesomeIcon icon={faGlobeAsia} /> prasetyonh.my.id
+                </a>
               </li>
             </p>
           </ul>

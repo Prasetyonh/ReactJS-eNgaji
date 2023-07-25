@@ -12,9 +12,9 @@ const AlQuran = (props) => {
 
   useEffect(() => {
     axios
-      .get("https://equran.id/api/surat")
+      .get("https://equran.id/api/v2/surat")
       .then((res) => {
-        const surats = res.data;
+        const surats = res.data.data;
         console.log(surats);
         setSurats(surats);
       })

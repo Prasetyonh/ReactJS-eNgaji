@@ -19,7 +19,7 @@ const DaftarSurat = ({ surat, goDetail }) => {
             <Card.Subtitle className="mb-2 text-muted fst-italic">
               '{surat.arti}'
             </Card.Subtitle>
-            <Card.Text>{surat.jumlah_ayat} ayat</Card.Text>
+            <Card.Text>{surat.jumlahAyat} ayat</Card.Text>
           </Card.Body>
         </Card>
       </div>
